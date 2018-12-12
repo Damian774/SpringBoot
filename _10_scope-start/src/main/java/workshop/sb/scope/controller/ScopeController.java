@@ -14,11 +14,24 @@ public class ScopeController {
     private ScopeService defaultScope;
 
     // TODO 4 wstrzyknij request i session
+    @Autowired
+    @Qualifier("request-scope")
+    private ScopeService requestScope;
+
+    @Autowired
+    @Qualifier("session-scope")
+    private ScopeService sessionScope;
 
     @GetMapping("/scope-default")
     public String getValueForDefault() {
         return defaultScope.responseMessage();
     }
+
+    @GetMapping("/scope-request")
+    public String getValueForRequest(){ return requestScope.responseMessage();}
+
+    @GetMapping("/scope-session")
+    public String getValueForSession(){ return sessionScope.responseMessage();}
 
     // TODO 5 zaimplementuj metody zwracające responseMessage z dodanych implementorów "/scope-request", "/scope-session"
 

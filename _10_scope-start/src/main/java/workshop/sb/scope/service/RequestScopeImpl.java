@@ -14,7 +14,7 @@ public class RequestScopeImpl implements ScopeService {
 
     @Override
     public String responseMessage() {
-        String msg = "The nuber is: " + i;
+        String msg = "The number is: " + i;
         i++;
         return msg;
     }
