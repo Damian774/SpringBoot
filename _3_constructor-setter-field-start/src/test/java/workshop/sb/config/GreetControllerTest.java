@@ -32,6 +32,7 @@ public class GreetControllerTest {
         this.mockMvc.perform(get("/greet"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello World!"));
+
     }
 
     // TODO 11 poeksperymentuj z różnymi sposobami wstrzykiwania (prop., set., konstruktor) - uruchamiaj test po każdej zmianie

@@ -8,8 +8,25 @@ import workshop.sb.config.workshop.sb.config.service.GreetService;
 @RestController
 public class GreetController {
 
+@Autowired
+ private GreetService greetService;
+
+
+ /*  private GreetService greetService;
+
     @Autowired
-    private GreetService greetService;
+    public GreetController(GreetService greetService) {
+        this.greetService = greetService;
+    }
+*/
+
+ /*private GreetService greetService;
+
+    @Autowired
+    public void setGreetService(GreetService greetService) {
+        this.greetService = greetService;
+    }
+*/
 
     @GetMapping("/greet")
     public String greet(){
