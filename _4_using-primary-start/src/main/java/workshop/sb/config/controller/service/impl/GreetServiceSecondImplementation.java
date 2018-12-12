@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import workshop.sb.config.controller.service.GreetService;
 
-@Service("second")
+@Service
+@Primary
 public class GreetServiceSecondImplementation implements GreetService {
 
     public static String SECOND_IMPL = " from the second implementation.";

@@ -10,7 +10,6 @@ import workshop.sb.config.controller.service.GreetService;
 public class GreetController {
 
     @Autowired
-    @Qualifier("second")
     private GreetService greetService;
 
 

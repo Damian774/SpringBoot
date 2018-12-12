@@ -1,10 +1,10 @@
 package workshop.sb.config.controller.service;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
-@Primary
+@Service("first")
 public class GreetServiceFirstImplementation implements GreetService {
 
     public static String FIRST_IMPL = " from the first implementation.";

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import workshop.sb.config.controller.service.GreetService;
 
 
-@Service("first")
+@Service
 public class GreetServiceFirstImplementation implements GreetService {
     public static String FIRST_IMPL = " from the first implementation.";
     @Override
